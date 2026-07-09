@@ -1,45 +1,44 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<?xml version='1.0' encoding='utf-8'?>
+<urlset xmlns:ns0="http://www.google.com/schemas/sitemap-image/1.1" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://produktfixaren-hemsida.daniel-eklund1981.workers.dev/</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://produktfixaren-hemsida.daniel-eklund1981.workers.dev/ai-produktfixare-hero-animated.webp</image:loc>
-      <image:title>Produktfixaren - Produkttexter, hemsidesfix, bildfix och prints</image:title>
-    </image:image>
+    <ns0:image>
+      <ns0:loc>https://produktfixaren-hemsida.daniel-eklund1981.workers.dev/ai-produktfixare-hero-animated.webp</ns0:loc>
+      <ns0:title>Produktfixaren - Produkttexter, hemsidesfix, bildfix och prints</ns0:title>
+    </ns0:image>
   </url>
   <url>
     <loc>https://produktfixaren-hemsida.daniel-eklund1981.workers.dev/produkttexter/</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://produktfixaren-hemsida.daniel-eklund1981.workers.dev/ai-produktfixare-hero-animated.webp</image:loc>
-      <image:title>Produkttexter för småföretag</image:title>
-    </image:image>
+    <ns0:image>
+      <ns0:loc>https://produktfixaren-hemsida.daniel-eklund1981.workers.dev/ai-produktfixare-hero-animated.webp</ns0:loc>
+      <ns0:title>Produkttexter för småföretag</ns0:title>
+    </ns0:image>
   </url>
   <url>
     <loc>https://produktfixaren-hemsida.daniel-eklund1981.workers.dev/hemsidesfix/</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://produktfixaren-hemsida.daniel-eklund1981.workers.dev/ai-produktfixare-hero-animated.webp</image:loc>
-      <image:title>Hemsidesfix för småföretag</image:title>
-    </image:image>
+    <ns0:image>
+      <ns0:loc>https://produktfixaren-hemsida.daniel-eklund1981.workers.dev/ai-produktfixare-hero-animated.webp</ns0:loc>
+      <ns0:title>Hemsidesfix för småföretag</ns0:title>
+    </ns0:image>
   </url>
   <url>
     <loc>https://produktfixaren-hemsida.daniel-eklund1981.workers.dev/bildfix/</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://produktfixaren-hemsida.daniel-eklund1981.workers.dev/fore-efter-produktbild.jpg</image:loc>
-      <image:title>Bildfix för produkter</image:title>
-    </image:image>
+    <ns0:image>
+      <ns0:loc>https://produktfixaren-hemsida.daniel-eklund1981.workers.dev/fore-efter-produktbild.jpg</ns0:loc>
+      <ns0:title>Bildfix för produkter</ns0:title>
+    </ns0:image>
   </url>
   <url>
     <loc>https://produktfixaren-hemsida.daniel-eklund1981.workers.dev/priser/</loc>
@@ -52,46 +51,46 @@
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://produktfixaren-hemsida.daniel-eklund1981.workers.dev/fore-efter-produktbild.jpg</image:loc>
-      <image:title>Före och efter produktbild</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://produktfixaren-hemsida.daniel-eklund1981.workers.dev/fore-efter-blomsterbutik.jpg</image:loc>
-      <image:title>Före och efter blomsterbutik</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://produktfixaren-hemsida.daniel-eklund1981.workers.dev/fore-efter-prints.jpg</image:loc>
-      <image:title>Före och efter prints</image:title>
-    </image:image>
+    <ns0:image>
+      <ns0:loc>https://produktfixaren-hemsida.daniel-eklund1981.workers.dev/fore-efter-produktbild.jpg</ns0:loc>
+      <ns0:title>Före och efter produktbild</ns0:title>
+    </ns0:image>
+    <ns0:image>
+      <ns0:loc>https://produktfixaren-hemsida.daniel-eklund1981.workers.dev/fore-efter-blomsterbutik.jpg</ns0:loc>
+      <ns0:title>Före och efter blomsterbutik</ns0:title>
+    </ns0:image>
+    <ns0:image>
+      <ns0:loc>https://produktfixaren-hemsida.daniel-eklund1981.workers.dev/fore-efter-prints.jpg</ns0:loc>
+      <ns0:title>Före och efter prints</ns0:title>
+    </ns0:image>
   </url>
   <url>
     <loc>https://produktfixaren-hemsida.daniel-eklund1981.workers.dev/exempel/</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://produktfixaren-hemsida.daniel-eklund1981.workers.dev/fore-efter-produktbild.jpg</image:loc>
-      <image:title>Före och efter produktbild</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://produktfixaren-hemsida.daniel-eklund1981.workers.dev/fore-efter-blomsterbutik.jpg</image:loc>
-      <image:title>Före och efter blomsterbutik</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://produktfixaren-hemsida.daniel-eklund1981.workers.dev/fore-efter-prints.jpg</image:loc>
-      <image:title>Före och efter prints</image:title>
-    </image:image>
+    <ns0:image>
+      <ns0:loc>https://produktfixaren-hemsida.daniel-eklund1981.workers.dev/fore-efter-produktbild.jpg</ns0:loc>
+      <ns0:title>Före och efter produktbild</ns0:title>
+    </ns0:image>
+    <ns0:image>
+      <ns0:loc>https://produktfixaren-hemsida.daniel-eklund1981.workers.dev/fore-efter-blomsterbutik.jpg</ns0:loc>
+      <ns0:title>Före och efter blomsterbutik</ns0:title>
+    </ns0:image>
+    <ns0:image>
+      <ns0:loc>https://produktfixaren-hemsida.daniel-eklund1981.workers.dev/fore-efter-prints.jpg</ns0:loc>
+      <ns0:title>Före och efter prints</ns0:title>
+    </ns0:image>
   </url>
   <url>
     <loc>https://produktfixaren-hemsida.daniel-eklund1981.workers.dev/blog/</loc>
     <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://produktfixaren-hemsida.daniel-eklund1981.workers.dev/ai-produktfixare-hero-animated.webp</image:loc>
-      <image:title>Blogg & resurser</image:title>
-    </image:image>
+    <ns0:image>
+      <ns0:loc>https://produktfixaren-hemsida.daniel-eklund1981.workers.dev/ai-produktfixare-hero-animated.webp</ns0:loc>
+      <ns0:title>Blogg &amp; resurser</ns0:title>
+    </ns0:image>
   </url>
   <url>
     <loc>https://produktfixaren-hemsida.daniel-eklund1981.workers.dev/om/</loc>
