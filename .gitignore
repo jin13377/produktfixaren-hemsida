@@ -1,0 +1,6 @@
+# Local Netlify folder
+.netlify
+
+# Large Netlify build artifacts (contain secrets)
+netlify-*.js
+*.zip

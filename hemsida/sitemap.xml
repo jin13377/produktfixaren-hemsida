@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://produktfixaren-daniel.netlify.app/</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://produktfixaren-daniel.netlify.app/ai-produktfixare-hero-animated.webp</image:loc>
+      <image:title>Produktfixaren - Produkttexter, hemsidesfix, bildfix och prints</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://produktfixaren-daniel.netlify.app/produkttexter/</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://produktfixaren-daniel.netlify.app/ai-produktfixare-hero-animated.webp</image:loc>
+      <image:title>Produkttexter för småföretag</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://produktfixaren-daniel.netlify.app/hemsidesfix/</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://produktfixaren-daniel.netlify.app/ai-produktfixare-hero-animated.webp</image:loc>
+      <image:title>Hemsidesfix för småföretag</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://produktfixaren-daniel.netlify.app/bildfix/</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://produktfixaren-daniel.netlify.app/fore-efter-produktbild.jpg</image:loc>
+      <image:title>Bildfix för produkter</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://produktfixaren-daniel.netlify.app/priser/</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://produktfixaren-daniel.netlify.app/case/</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://produktfixaren-daniel.netlify.app/fore-efter-produktbild.jpg</image:loc>
+      <image:title>Före och efter produktbild</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://produktfixaren-daniel.netlify.app/fore-efter-blomsterbutik.jpg</image:loc>
+      <image:title>Före och efter blomsterbutik</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://produktfixaren-daniel.netlify.app/fore-efter-prints.jpg</image:loc>
+      <image:title>Före och efter prints</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://produktfixaren-daniel.netlify.app/exempel/</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://produktfixaren-daniel.netlify.app/fore-efter-produktbild.jpg</image:loc>
+      <image:title>Före och efter produktbild</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://produktfixaren-daniel.netlify.app/fore-efter-blomsterbutik.jpg</image:loc>
+      <image:title>Före och efter blomsterbutik</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://produktfixaren-daniel.netlify.app/fore-efter-prints.jpg</image:loc>
+      <image:title>Före och efter prints</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://produktfixaren-daniel.netlify.app/blog/</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://produktfixaren-daniel.netlify.app/ai-produktfixare-hero-animated.webp</image:loc>
+      <image:title>Blogg & resurser</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://produktfixaren-daniel.netlify.app/om/</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://produktfixaren-daniel.netlify.app/kontakt/</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

@@ -1,0 +1,1528 @@
+:root {
+  color-scheme: light;
+  --ink: #17201b;
+  --muted: #5a665f;
+  --paper: #f7f4ed;
+  --surface: #ffffff;
+  --soft: #edf3ef;
+  --line: #d8ded8;
+  --line-strong: #b9c5bd;
+  --green: #1f6f52;
+  --green-dark: #14503b;
+  --blue: #2d5f7a;
+  --amber: #bd741d;
+  --dark: #111917;
+  --shadow: 0 14px 34px rgba(39, 46, 42, 0.07);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 96px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.55;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: rgba(31, 111, 82, 0.18);
+  touch-action: manipulation;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--green-dark);
+  text-underline-offset: 0.18em;
+}
+
+a:hover,
+a:active {
+  color: var(--green);
+}
+
+[id] {
+  scroll-margin-top: 96px;
+}
+
+:focus-visible {
+  outline: 3px solid #f2b84b;
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: 12px;
+  z-index: 30;
+  transform: translateY(-150%);
+  border-radius: 6px;
+  padding: 10px 12px;
+  background: #fff;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding:
+    14px max(clamp(18px, 4vw, 52px), calc(env(safe-area-inset-right) + 18px))
+    14px max(clamp(18px, 4vw, 52px), calc(env(safe-area-inset-left) + 18px));
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+}
+
+.brand {
+  color: var(--ink);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.site-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.site-nav a {
+  flex: 0 0 auto;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  padding: 8px 11px;
+  background: #fff;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  border-color: rgba(31, 111, 82, 0.45);
+  color: var(--green-dark);
+  background: var(--soft);
+}
+
+.hero {
+  position: relative;
+  min-height: 78svh;
+  display: grid;
+  align-items: end;
+  overflow: hidden;
+  background: var(--dark);
+  color: #fff;
+}
+
+.hero-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(9, 14, 12, 0.9), rgba(9, 14, 12, 0.64) 48%, rgba(9, 14, 12, 0.14)),
+    linear-gradient(0deg, rgba(9, 14, 12, 0.72), transparent 48%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 760px;
+  min-width: 0;
+  padding: clamp(58px, 8vw, 96px) clamp(18px, 5vw, 64px) clamp(38px, 5vw, 60px);
+}
+
+.page-hero {
+  padding: clamp(52px, 9vw, 92px) clamp(18px, 5vw, 64px);
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+
+.page-hero .wrap {
+  max-width: 900px;
+}
+
+.eyebrow,
+.kicker {
+  margin: 0 0 12px;
+  color: var(--green-dark);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero .eyebrow {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1.08;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+h1 {
+  max-width: 860px;
+  font-size: clamp(38px, 7vw, 76px);
+  overflow-wrap: break-word;
+}
+
+h2 {
+  font-size: clamp(27px, 4vw, 44px);
+}
+
+h3 {
+  font-size: 21px;
+}
+
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+.lead {
+  max-width: 680px;
+  margin-top: 18px;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: clamp(18px, 2.1vw, 22px);
+}
+
+.dark-text {
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+/* ========================================
+   ENHANCED BUTTON SYSTEM
+   ======================================== */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  border: 2px solid var(--green-dark);
+  border-radius: 10px;
+  padding: 0 24px;
+  background: var(--green);
+  color: #fff;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 1.4;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition:
+    background-color 180ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 180ms cubic-bezier(0.16, 1, 0.3, 1),
+    color 180ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 120ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1),
+    filter 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow:
+    0 1px 2px rgba(39, 46, 42, 0.08),
+    0 4px 8px rgba(31, 111, 82, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Shimmer overlay for premium feel */
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.18) 0%,
+    rgba(255, 255, 255, 0.06) 40%,
+    rgba(255, 255, 255, 0) 60%,
+    rgba(0, 0, 0, 0.06) 100%
+  );
+  opacity: 0;
+  transition: opacity 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.button:hover::before,
+.button:focus-visible::before {
+  opacity: 1;
+}
+
+/* Ripple effect */
+.button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.25) 0%, transparent 70%);
+  opacity: 0;
+  transform: scale(0);
+  pointer-events: none;
+}
+
+.button:active::after {
+  animation: buttonRipple 350ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes buttonRipple {
+  0% {
+    opacity: 0.4;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3);
+  }
+}
+
+/* Primary button hover/tap states */
+.button:hover,
+.button:focus-visible {
+  background: var(--green-dark);
+  border-color: var(--green-dark);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow:
+    0 4px 12px rgba(31, 111, 82, 0.22),
+    0 8px 24px rgba(31, 111, 82, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.button:active {
+  transform: translateY(1px) scale(0.99);
+  box-shadow:
+    0 1px 2px rgba(39, 46, 42, 0.1),
+    0 2px 6px rgba(31, 111, 82, 0.15),
+    inset 0 2px 4px rgba(0, 0, 0, 0.08);
+  transition-duration: 60ms;
+}
+
+.button:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 3px #f2b84b,
+    0 4px 12px rgba(31, 111, 82, 0.22),
+    0 8px 24px rgba(31, 111, 82, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+/* Secondary variant */
+.button.secondary {
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  box-shadow:
+    0 1px 2px rgba(39, 46, 42, 0.08),
+    0 4px 8px rgba(255, 255, 255, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.button.secondary::before {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.22) 0%,
+    rgba(255, 255, 255, 0.08) 40%,
+    rgba(255, 255, 255, 0) 60%,
+    rgba(0, 0, 0, 0.04) 100%
+  );
+}
+
+.button.secondary:hover,
+.button.secondary:focus-visible {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.7);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow:
+    0 4px 12px rgba(255, 255, 255, 0.1),
+    0 8px 24px rgba(255, 255, 255, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.button.secondary:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 3px #f2b84b,
+    0 4px 12px rgba(255, 255, 255, 0.1),
+    0 8px 24px rgba(255, 255, 255, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.button.secondary:active {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(1px) scale(0.99);
+  box-shadow:
+    0 1px 2px rgba(39, 46, 42, 0.1),
+    0 2px 6px rgba(255, 255, 255, 0.08),
+    inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Light variant */
+.button.light {
+  border-color: #fff;
+  background: #fff;
+  color: var(--green-dark);
+  box-shadow:
+    0 1px 2px rgba(39, 46, 42, 0.08),
+    0 4px 8px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.button.light::before {
+  background: linear-gradient(
+    180deg,
+    rgba(31, 111, 82, 0.08) 0%,
+    rgba(31, 111, 82, 0.03) 40%,
+    rgba(31, 111, 82, 0) 60%,
+    rgba(0, 0, 0, 0.03) 100%
+  );
+}
+
+.button.light:hover,
+.button.light:focus-visible {
+  background: #f7fbf8;
+  border-color: #fff;
+  color: var(--green);
+  transform: translateY(-2px);
+  box-shadow:
+    0 4px 12px rgba(31, 111, 82, 0.15),
+    0 8px 24px rgba(31, 111, 82, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.button.light:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 3px #f2b84b,
+    0 4px 12px rgba(31, 111, 82, 0.15),
+    0 8px 24px rgba(31, 111, 82, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.button.light:active {
+  background: #eff5f1;
+  transform: translateY(1px) scale(0.99);
+  box-shadow:
+    0 1px 2px rgba(39, 46, 42, 0.1),
+    0 2px 6px rgba(0, 0, 0, 0.06),
+    inset 0 2px 4px rgba(31, 111, 82, 0.08);
+}
+
+/* Ghost variant - for less prominent actions */
+.button.ghost {
+  border-color: transparent;
+  background: transparent;
+  color: var(--green-dark);
+  box-shadow: none;
+  padding: 0 16px;
+}
+
+.button.ghost::before {
+  background: linear-gradient(
+    180deg,
+    rgba(31, 111, 82, 0.06) 0%,
+    rgba(31, 111, 82, 0.02) 40%,
+    rgba(31, 111, 82, 0) 60%,
+    rgba(0, 0, 0, 0.02) 100%
+  );
+}
+
+.button.ghost:hover,
+.button.ghost:focus-visible {
+  background: var(--soft);
+  color: var(--green);
+  transform: translateY(-1px);
+}
+
+.button.ghost:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px #f2b84b;
+}
+
+.button.ghost:active {
+  background: var(--green);
+  color: #fff;
+  transform: translateY(0) scale(0.98);
+}
+
+/* Small variant */
+.button.sm {
+  min-height: 40px;
+  padding: 0 16px;
+  font-size: 14px;
+  border-radius: 8px;
+}
+
+/* Large variant */
+.button.lg {
+  min-height: 56px;
+  padding: 0 32px;
+  font-size: 16px;
+  border-radius: 12px;
+}
+
+/* Full width */
+.button.full-width,
+.button[style*="width: 100%"] {
+  width: 100%;
+}
+
+/* Loading state */
+.button.loading {
+  pointer-events: none;
+  color: transparent;
+}
+
+.button.loading::after {
+  display: none;
+}
+
+.button.loading::before {
+  display: none;
+}
+
+.button.loading > .btn-text {
+  opacity: 0;
+  position: absolute;
+}
+
+.button.loading::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: buttonSpin 0.7s linear infinite;
+  opacity: 1;
+}
+
+@keyframes buttonSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .button,
+  .button::before,
+  .button::after,
+  .button * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .button:hover,
+  .button:focus-visible {
+    transform: none;
+  }
+  
+  .button:active {
+    transform: scale(0.99);
+  }
+}
+
+.trust-strip {
+  padding: 18px clamp(18px, 5vw, 64px);
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+
+.trust-list {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.trust-list span {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.trust-list span::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 0 4px rgba(31, 111, 82, 0.12);
+}
+
+.section {
+  padding: clamp(48px, 8vw, 88px) clamp(18px, 5vw, 64px);
+}
+
+.surface {
+  background: #fff;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.wrap {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.section-head {
+  max-width: 760px;
+  margin-bottom: 28px;
+}
+
+.section-head p:not(.kicker),
+.prose,
+.card p,
+.service-card p,
+.price-card p,
+.case-card p,
+.before-after-grid p,
+.faq p,
+.contact-note {
+  color: var(--muted);
+}
+
+.split,
+.media-row,
+.cta-grid,
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: clamp(24px, 5vw, 56px);
+  align-items: start;
+}
+
+.prose p + p,
+.service-list li + li,
+.check-list li + li {
+  margin-top: 12px;
+}
+
+.card-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.card-grid.three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card,
+.service-card,
+.price-card,
+.case-card,
+.before-after-grid article,
+.form-panel {
+  min-width: 0;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  background: var(--surface);
+  padding: 22px;
+  box-shadow: var(--shadow);
+  overflow-wrap: break-word;
+}
+
+.service-card,
+.price-card,
+.case-card {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.service-card a,
+.price-card a,
+.case-card a {
+  margin-top: auto;
+  font-weight: 900;
+}
+
+.featured {
+  border-color: rgba(31, 111, 82, 0.5);
+  background: #f7fbf8;
+}
+
+.price {
+  color: var(--green-dark);
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.before-after-block {
+  display: grid;
+  gap: 8px;
+}
+
+.before-after-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.before-after-grid span {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 12px;
+  border-radius: 999px;
+  padding: 5px 10px;
+  background: var(--soft);
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.steps .card {
+  box-shadow: none;
+}
+
+.media-row {
+  align-items: center;
+}
+
+.media-row img,
+.case-image {
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.service-list,
+.check-list {
+  margin: 18px 0 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.faq {
+  max-width: 880px;
+}
+
+.faq details {
+  border-top: 1px solid var(--line-strong);
+  padding: 18px 0;
+}
+
+.faq details:last-child {
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.faq summary {
+  cursor: pointer;
+  color: var(--ink);
+  font-weight: 900;
+}
+
+.faq p {
+  margin-top: 10px;
+}
+
+.cta-section {
+  padding: clamp(38px, 7vw, 70px) clamp(18px, 5vw, 64px);
+  background: var(--green-dark);
+  color: #fff;
+}
+
+.cta-section p {
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.cta-grid {
+  align-items: center;
+}
+
+.contact-form {
+  display: grid;
+  gap: 14px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.field label {
+  font-weight: 900;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  padding: 12px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+}
+
+.field select {
+  appearance: auto;
+}
+
+.field textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.help-text,
+.form-status {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.hidden {
+  display: none;
+}
+
+.site-footer {
+  padding: 26px clamp(18px, 5vw, 64px);
+  background: var(--dark);
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.footer-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.site-footer a {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.site-footer nav {
+  display: flex;
+  gap: 14px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ============================================================
+   ANIMATED BORDER EFFECTS & ANIMATED BACKGROUND PATTERNS
+   ============================================================ */
+
+/* CSS Custom Properties for animations */
+:root {
+  --border-gradient-1: linear-gradient(135deg, var(--green) 0%, var(--blue) 50%, var(--amber) 100%);
+  --border-gradient-2: linear-gradient(135deg, var(--blue) 0%, var(--green) 50%, var(--amber) 100%);
+  --mesh-gradient-1: radial-gradient(ellipse 80% 50% at 20% 0%, rgba(31, 111, 82, 0.12) 0%, transparent 50%),
+                     radial-gradient(ellipse 60% 40% at 80% 100%, rgba(45, 95, 122, 0.1) 0%, transparent 50%),
+                     radial-gradient(ellipse 50% 60% at 50% 50%, rgba(189, 116, 29, 0.08) 0%, transparent 50%);
+  --mesh-gradient-2: radial-gradient(ellipse 70% 50% at 80% 0%, rgba(45, 95, 122, 0.1) 0%, transparent 50%),
+                     radial-gradient(ellipse 60% 40% at 20% 100%, rgba(31, 111, 82, 0.12) 0%, transparent 50%),
+                     radial-gradient(ellipse 50% 60% at 50% 50%, rgba(189, 116, 29, 0.08) 0%, transparent 50%);
+  --grid-color: rgba(31, 111, 82, 0.06);
+  --grid-color-dark: rgba(255, 255, 255, 0.04);
+  --line-color: rgba(31, 111, 82, 0.08);
+  --line-color-dark: rgba(255, 255, 255, 0.06);
+}
+
+/* ============================================================
+   KEYFRAME ANIMATIONS
+   ============================================================ */
+
+/* Animated gradient border - rotating conic gradient */
+@keyframes border-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Subtle border pulse/shimmer */
+@keyframes border-shimmer {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.7; }
+}
+
+/* Animated mesh gradient background - slow drift */
+@keyframes mesh-drift {
+  0%, 100% { background-position: 0% 0%, 100% 100%, 50% 50%; }
+  25% { background-position: 50% 100%, 0% 50%, 100% 0%; }
+  50% { background-position: 100% 50%, 50% 0%, 0% 100%; }
+  75% { background-position: 50% 0%, 100% 50%, 0% 100%; }
+}
+
+/* Subtle mesh gradient for light sections */
+@keyframes mesh-drift-light {
+  0%, 100% { background-position: 0% 0%, 100% 100%, 50% 50%; }
+  33% { background-position: 100% 0%, 0% 100%, 50% 50% 50%; }
+  66% { background-position: 50% 100%, 50% 0%, 100% 50%; }
+}
+
+/* Animated grid lines */
+@keyframes grid-move {
+  0% { background-position: 0 0, 0 0; }
+  100% { background-position: 40px 40px, -40px -40px; }
+}
+
+/* Animated diagonal lines */
+@keyframes lines-move {
+  0% { background-position: 0 0; }
+  100% { background-position: 60px 60px; }
+}
+
+/* Subtle border glow pulse */
+@keyframes border-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(31, 111, 82, 0), var(--shadow); }
+  50% { box-shadow: 0 0 20px 4px rgba(31, 111, 82, 0.15), var(--shadow); }
+}
+
+/* Subtle border glow for dark sections */
+@keyframes border-glow-dark {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(45, 95, 122, 0), var(--shadow); }
+  50% { box-shadow: 0 0 20px 4px rgba(45, 95, 122, 0.15), var(--shadow); }
+}
+
+/* Subtle shimmer sweep across cards */
+@keyframes shimmer-sweep {
+  0% { transform: translateX(-100%) skewX(-15deg); opacity: 0; }
+  20% { opacity: 0.3; }
+  80% { opacity: 0.3; }
+  100% { transform: translateX(200%) skewX(-15deg); opacity: 0; }
+}
+
+/* Mesh gradient for hero (darker) */
+@keyframes hero-mesh-drift {
+  0%, 100% {
+    background-position: 0% 0%, 100% 100%, 50% 50%;
+    opacity: 0.6;
+  }
+  25% {
+    background-position: 50% 100%, 0% 50%, 100% 0%;
+    opacity: 0.8;
+  }
+  50% {
+    background-position: 100% 50%, 50% 0%, 0% 100%;
+    opacity: 0.6;
+  }
+  75% {
+    background-position: 50% 0%, 100% 50%, 0% 100%;
+    opacity: 0.8;
+  }
+}
+
+/* Mesh gradient for light sections */
+@keyframes section-mesh-drift {
+  0%, 100% {
+    background-position: 0% 0%, 100% 100%, 50% 50%;
+    opacity: 0.4;
+  }
+  33% {
+    background-position: 100% 0%, 0% 100%, 50% 50%;
+    opacity: 0.6;
+  }
+  66% {
+    background-position: 50% 100%, 50% 0%, 100% 50%;
+    opacity: 0.4;
+  }
+}
+
+/* Grid pattern animation for sections */
+@keyframes section-grid-move {
+  0% { background-position: 0 0; }
+  100% { background-position: 80px 80px; }
+}
+
+/* Subtle diagonal lines animation */
+@keyframes diagonal-lines-move {
+  0% { background-position: 0 0; }
+  100% { background-position: 100px 100px; }
+}
+
+/* ============================================================
+   ANIMATED GRADIENT BORDERS FOR CARDS/SECTIONS
+   ============================================================ */
+
+/* Base animated border utility - uses ::before pseudo-element */
+.animated-border,
+.service-card,
+.price-card,
+.card,
+.case-card,
+.form-panel {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated gradient border using ::before pseudo-element */
+.animated-border::before,
+.service-card::before,
+.price-card::before,
+.card::before,
+.case-card::before,
+.form-panel::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 10px;
+  background: var(--border-gradient-1);
+  background-size: 300% 300%;
+  z-index: -1;
+  opacity: 0;
+  animation: border-rotate 8s linear infinite, border-shimmer 4s ease-in-out infinite;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+/* Show animated border on hover/focus */
+.animated-border:hover::before,
+.animated-border:focus-within::before,
+.service-card:hover::before,
+.service-card:focus-within::before,
+.price-card:hover::before,
+.price-card:focus-within::before,
+.card:hover::before,
+.card:focus-within::before,
+.case-card:hover::before,
+.case-card:focus-within::before,
+.form-panel:hover::before,
+.form-panel:focus-within::before {
+  opacity: 1;
+}
+
+/* Featured/featured price card - stronger border */
+.price-card.featured::before {
+  background: var(--border-gradient-2);
+  opacity: 0.4;
+  animation-duration: 6s;
+}
+
+.price-card.featured:hover::before {
+  opacity: 1;
+}
+
+/* Subtle animated border (always visible, subtle) */
+.subtle-animated-border {
+  position: relative;
+}
+
+.subtle-animated-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 9px;
+  background: linear-gradient(135deg, 
+    transparent 0%,
+    rgba(31, 111, 82, 0.15) 25%,
+    transparent 50%,
+    rgba(45, 95, 122, 0.15) 75%,
+    transparent 100%
+  );
+  background-size: 200% 200%;
+  opacity: 0.5;
+  animation: border-rotate 12s linear infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Dark version for dark sections */
+.subtle-animated-border-dark::before {
+  background: linear-gradient(135deg,
+    transparent 0%,
+    rgba(45, 95, 122, 0.2) 25%,
+    transparent 50%,
+    rgba(189, 116, 29, 0.2) 75%,
+    transparent 100%
+  );
+}
+
+/* ============================================================
+   ANIMATED GRADIENT BACKGROUNDS - MESH GRADIENTS
+   ============================================================ */
+
+/* Hero section - animated mesh gradient overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: 
+    radial-gradient(ellipse 80% 50% at 20% 0%, rgba(31, 111, 82, 0.18) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 40% at 80% 100%, rgba(45, 95, 122, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 60% at 50% 50%, rgba(189, 116, 29, 0.12) 0%, transparent 50%);
+  background-size: 200% 200%, 200% 200%, 200% 200%;
+  animation: hero-mesh-drift 20s ease-in-out infinite;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+/* Subtle animated mesh gradient for light sections */
+.section.surface::before,
+.section.surface .wrap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 80% 0%, rgba(31, 111, 82, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 40% at 20% 100%, rgba(45, 95, 122, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 60% at 50% 50%, rgba(189, 116, 29, 0.04) 0%, transparent 50%);
+  background-size: 200% 200%, 200% 200%, 200% 200%;
+  animation: section-mesh-drift 25s ease-in-out infinite;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Hero content stays above mesh gradient */
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Section mesh gradient - lighter version for regular sections */
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 60% 40% at 10% 10%, rgba(31, 111, 82, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 50% at 90% 90%, rgba(45, 95, 122, 0.03) 0%, transparent 50%);
+  background-size: 200% 200%, 200% 200%;
+  animation: section-mesh-drift 30s ease-in-out infinite;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* Ensure section content is above mesh gradient */
+.section > .wrap,
+.section > .wrap > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* CTA section - darker mesh gradient */
+.cta-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 0%, rgba(255, 255, 255, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 40% at 80% 100%, rgba(255, 255, 255, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 60% at 50% 50%, rgba(189, 116, 29, 0.1) 0%, transparent 50%);
+  background-size: 200% 200%, 200% 200%, 200% 200%;
+  animation: hero-mesh-drift 20s ease-in-out infinite;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.cta-section .wrap,
+.cta-section .cta-grid {
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================================
+   ANIMATED GRID/LINES BACKGROUND PATTERNS
+   ============================================================ */
+
+/* Subtle animated grid lines for sections */
+.animated-grid-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-grid-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: 
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: grid-move 30s linear infinite;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* Dark version for dark sections */
+.animated-grid-bg-dark::after {
+  background-image: 
+    linear-gradient(var(--grid-color-dark) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color-dark) 1px, transparent 1px);
+}
+
+/* Subtle animated diagonal lines */
+.animated-lines-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-lines-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(31, 111, 82, 0.03) 10px,
+      rgba(31, 111, 82, 0.03) 11px
+    );
+  background-size: 60px 60px;
+  animation: lines-move 40s linear infinite;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Dark version for dark sections */
+.animated-lines-bg-dark::after {
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(255, 255, 255, 0.02) 10px,
+      rgba(255, 255, 255, 0.02) 11px
+    );
+}
+
+/* Subtle animated dots pattern */
+.animated-dots-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-dots-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: 
+    radial-gradient(circle, rgba(31, 111, 82, 0.04) 1px, transparent 1px);
+  background-size: 30px 30px;
+  animation: section-grid-move 40s linear infinite;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* ============================================================
+   SUBTLE ANIMATED BORDERS ON CARDS/SECTIONS
+   ============================================================ */
+
+/* Glow pulse effect on cards */
+.glow-pulse,
+.service-card,
+.price-card,
+.card,
+.case-card {
+  transition: box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.glow-pulse:hover,
+.service-card:hover,
+.price-card:hover,
+.card:hover,
+.case-card:hover {
+  animation: border-glow 3s ease-in-out infinite;
+  border-color: rgba(31, 111, 82, 0.3);
+}
+
+.price-card.featured:hover {
+  animation: border-glow 3s ease-in-out infinite;
+  border-color: rgba(31, 111, 82, 0.5);
+}
+
+/* Dark section cards glow */
+.surface .card:hover,
+.surface .service-card:hover,
+.surface .price-card:hover,
+.surface .case-card:hover {
+  animation: border-glow 3s ease-in-out infinite;
+  border-color: rgba(31, 111, 82, 0.4);
+}
+
+/* Subtle shimmer sweep effect on card hover */
+.shimmer-sweep {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-sweep::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: skewX(-15deg);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.shimmer-sweep:hover::after {
+  animation: shimmer-sweep 1.5s ease-in-out;
+}
+
+/* Dark version for dark backgrounds */
+.shimmer-sweep-dark::after {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.05),
+    transparent
+  );
+}
+
+/* ============================================================
+   SUBTLE ANIMATED MESH GRADIENT BACKGROUNDS FOR HERO/SECTIONS
+   ============================================================ */
+
+/* Hero mesh gradient - already defined in .hero::before above */
+
+/* Section with subtle animated mesh */
+.section-mesh {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-mesh::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 60% 40% at 10% 10%, rgba(31, 111, 82, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 50% at 90% 90%, rgba(45, 95, 122, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse 40% 60% at 50% 50%, rgba(189, 116, 29, 0.03) 0%, transparent 50%);
+  background-size: 200% 200%, 200% 200%, 200% 200%;
+  animation: section-mesh-drift 30s ease-in-out infinite;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Lighter mesh for surface sections */
+.section-mesh-light::before {
+  background:
+    radial-gradient(ellipse 50% 40% at 10% 10%, rgba(31, 111, 82, 0.03) 0%, transparent 50%),
+    radial-gradient(ellipse 40% 50% at 90% 90%, rgba(45, 95, 122, 0.02) 0%, transparent 50%);
+  background-size: 200% 200%, 200% 200%;
+  animation: section-mesh-drift 35s ease-in-out infinite;
+  opacity: 0.4;
+}
+
+/* Dark mesh for dark sections */
+.section-mesh-dark::before {
+  background:
+    radial-gradient(ellipse 70% 50% at 20% 0%, rgba(45, 95, 122, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 40% at 80% 100%, rgba(31, 111, 82, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 60% at 50% 50%, rgba(189, 116, 29, 0.06) 0%, transparent 50%);
+  background-size: 200% 200%, 200% 200%, 200% 200%;
+  animation: hero-mesh-drift 25s ease-in-out infinite;
+  opacity: 0.7;
+}
+
+/* ============================================================
+   APPLY ANIMATED BORDERS TO EXISTING CARD CLASSES
+   ============================================================ */
+
+/* Apply animated gradient borders to existing cards */
+.service-card,
+.price-card,
+.card,
+.case-card,
+.form-panel {
+  /* The ::before pseudo-element for animated border is already defined above */
+}
+
+/* Add shimmer sweep to service and price cards */
+.service-card,
+.price-card,
+.case-card {
+  overflow: hidden;
+}
+
+/* Apply subtle animated mesh to sections */
+.section.surface {
+  position: relative;
+  overflow: hidden;
+}
+
+/* ============================================================
+   RESPECTS PREFERS-REDUCED-MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .animated-border::before,
+  .service-card::before,
+  .price-card::before,
+  .card::before,
+  .case-card::before,
+  .form-panel::before,
+  .hero::before,
+  .section::before,
+  .section.surface::before,
+  .cta-section::before,
+  .animated-grid-bg::after,
+  .animated-lines-bg::after,
+  .animated-dots-bg::after,
+  .section-mesh::before,
+  .section-mesh-light::before,
+  .section-mesh-dark::before,
+  .subtle-animated-border::before,
+  .subtle-animated-border-dark::before {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+
+  .glow-pulse:hover,
+  .service-card:hover,
+  .price-card:hover,
+  .card:hover,
+  .case-card:hover {
+    animation: none !important;
+  }
+
+  .shimmer-sweep:hover::after {
+    animation: none !important;
+  }
+}
+
+/* ============================================================
+   EXISTING MEDIA QUERIES (kept from original)
+   ============================================================ */
+
+@media (max-width: 880px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .site-nav {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 2px;
+  }
+
+  .site-nav a {
+    padding: 7px 9px;
+    font-size: 13px;
+  }
+
+  .hero {
+    min-height: 74svh;
+  }
+
+  .hero-content {
+    width: 100vw;
+    max-width: 100vw;
+    padding: 72px 24px 52px;
+  }
+
+  h1 {
+    max-width: 14ch;
+    font-size: clamp(32px, 9vw, 42px);
+  }
+
+  .eyebrow {
+    max-width: 29ch;
+  }
+
+  .lead {
+    max-width: 30ch;
+    font-size: 18px;
+  }
+
+  .trust-list,
+  .card-grid.three,
+  .before-after-grid,
+  .split,
+  .media-row,
+  .cta-grid,
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

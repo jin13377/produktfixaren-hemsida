@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontakt | Produktfixaren</title>
+  <meta name="description" content="Kontakta Produktfixaren för produkttexter, hemsidesfix, bildfix eller prints. Skicka länk, text eller bild via Netlify-formulär.">
+  <link rel="canonical" href="https://produktfixaren-daniel.netlify.app/kontakt/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:site_name" content="Produktfixaren">
+  <meta property="og:title" content="Kontakta Produktfixaren">
+  <meta property="og:description" content="Skicka text, länk, bild eller lokalbild och få nästa steg med pris innan start.">
+  <meta property="og:url" content="https://produktfixaren-daniel.netlify.app/kontakt/">
+  <meta property="og:image" content="https://produktfixaren-daniel.netlify.app/ai-produktfixare-hero-animated.webp">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Hoppa till innehåll</a>
+  <header class="site-header"><a class="brand" href="/">Produktfixaren</a><nav class="site-nav" aria-label="Huvudmeny"><a href="/produkttexter/">Produkttexter</a><a href="/hemsidesfix/">Hemsidesfix</a><a href="/bildfix/">Bildfix</a><a href="/priser/">Priser</a><a href="/case/">Exempel</a><a href="/blog/">Blogg</a><a href="/om/">Om</a><a href="/kontakt/">Kontakt</a></nav></header>
+  <main id="main">
+    <section class="page-hero"><div class="wrap"><p class="kicker">Kontakt</p><h1>Skicka text, länk, bild eller lokalbild så tar vi nästa steg.</h1><p class="lead dark-text">Berätta kort vad du vill förbättra. Du får svar med förslag och pris innan arbetet börjar.</p></div></section>
+    <section class="section">
+      <div class="wrap contact-layout">
+        <div class="form-panel">
+          <form class="contact-form" name="kontakt" method="POST" action="/tack/" netlify data-netlify="true" netlify-honeypot="bot-field" data-netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="kontakt">
+            <p class="hidden"><label>Fyll inte i detta fält <input name="bot-field" autocomplete="off"></label></p>
+            <div class="field"><label for="namn">Namn</label><input id="namn" name="namn" autocomplete="name" placeholder="Anna Andersson…" required></div>
+            <div class="field"><label for="epost">E-post</label><input id="epost" name="epost" type="email" autocomplete="email" spellcheck="false" inputmode="email" placeholder="anna@foretag.se…" required></div>
+            <div class="field"><label for="tjanst">Vad vill du ha hjälp med?</label><select id="tjanst" name="tjanst" required><option value="" disabled selected>Välj ett alternativ</option><option>Produkttexter</option><option>Hemsidesfix</option><option>Bildfix eller prints</option><option>Inte säker än</option></select></div>
+            <div class="field"><label for="lank">Länk eller produkt</label><input id="lank" name="lank" inputmode="url" autocomplete="url" placeholder="https://exempel.se/produkt…" aria-describedby="lank-hjalp"><span class="help-text" id="lank-hjalp">Klistra gärna in hemsida, produktlänk, bildidé eller kort beskrivning.</span></div>
+            <div class="field"><label for="meddelande">Meddelande</label><textarea id="meddelande" name="meddelande" autocomplete="off" placeholder="Till exempel: Vi vill göra startsidan tydligare…" required></textarea></div>
+            <p class="form-status" data-form-status aria-live="polite">Formuläret skickas via Netlify Forms.</p>
+            <button class="button" type="submit">Skicka förslag</button>
+          </form>
+        </div>
+        <div>
+          <h2>Det räcker med kort information.</h2>
+          <ul class="check-list">
+            <li>Vad säljer du?</li>
+            <li>Vilken text, bild, sida eller lokal känns svag?</li>
+            <li>Har du en produktbild, lokalbild eller länk?</li>
+            <li>Vad ska kunden göra: köpa, boka, ringa eller fråga?</li>
+          </ul>
+          <p class="contact-note">Direktmail finns kvar som reserv: <a href="mailto:daniel.eklund1981@gmail.com">daniel.eklund1981@gmail.com</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-grid"><p>Produktfixaren.</p><nav aria-label="Sidfot"><a href="/priser/">Priser</a><a href="/case/">Exempel</a><a href="/blog/">Blogg</a><a href="/om/">Om</a></nav></div></footer>
+  <script src="/main.js" defer></script>
+</body>
+</html>

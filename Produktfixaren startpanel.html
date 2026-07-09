@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Produktfixaren - startpanel</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17201b;
+      --muted: #5a665f;
+      --line: #d8ded8;
+      --paper: #f6f4ee;
+      --panel: #ffffff;
+      --green: #1f6f52;
+      --green-dark: #14503b;
+      --amber: #d18b21;
+      --blue: #2d5f7a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+    }
+
+    main {
+      min-height: 100vh;
+      padding: 28px;
+      display: grid;
+      gap: 18px;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: start;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .hero,
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .hero {
+      padding: 28px;
+      display: grid;
+      gap: 22px;
+    }
+
+    .eyebrow {
+      margin: 0;
+      color: var(--green);
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 42px;
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 20px;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    a.button,
+    button {
+      min-height: 42px;
+      border-radius: 6px;
+      border: 1px solid var(--green-dark);
+      background: var(--green);
+      color: white;
+      padding: 10px 14px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    a.button.secondary,
+    button.secondary {
+      background: white;
+      color: var(--green-dark);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      min-height: 96px;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 24px;
+      margin-bottom: 6px;
+    }
+
+    .panel {
+      padding: 20px;
+    }
+
+    .stack {
+      display: grid;
+      gap: 18px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 12px;
+      align-items: start;
+      padding: 12px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .step:first-of-type {
+      border-top: 0;
+    }
+
+    .number {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #e7f0eb;
+      color: var(--green-dark);
+      font-weight: 700;
+    }
+
+    .tag {
+      display: inline-flex;
+      width: fit-content;
+      border: 1px solid #ead2a8;
+      background: #fff6e6;
+      color: #76500d;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .customer {
+      border-left: 4px solid var(--amber);
+      padding-left: 14px;
+    }
+
+    .mailbox {
+      border: 1px solid var(--line);
+      background: #f9faf7;
+      border-radius: 8px;
+      padding: 14px;
+      white-space: pre-wrap;
+      color: #28332d;
+      line-height: 1.45;
+      font-size: 14px;
+      max-height: 320px;
+      overflow: auto;
+    }
+
+    @media (max-width: 860px) {
+      main {
+        grid-template-columns: 1fr;
+        padding: 16px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Produktfixaren</p>
+      <h1>En lugn väg till första betalande kunden.</h1>
+      <p>
+        Startpanelen samlar hemsidan, första erbjudandet och första kunden på ett ställe.
+        Målet är inte att bygga mer just nu. Målet är att skicka ett bra första meddelande.
+      </p>
+
+      <div class="actions">
+        <a class="button" href="https://produktfixaren-daniel.netlify.app/" target="_blank" rel="noreferrer">Öppna hemsidan</a>
+        <a class="button secondary" id="mailLink" href="#">Öppna första mailet</a>
+      </div>
+
+      <div class="grid">
+        <div class="metric">
+          <strong>600 kr</strong>
+          <p>Startpaket: 3 bättre texter</p>
+        </div>
+        <div class="metric">
+          <strong>1</strong>
+          <p>Första kund att kontakta</p>
+        </div>
+        <div class="metric">
+          <strong>15 min</strong>
+          <p>Dagens uppgift</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="stack">
+      <div class="panel">
+        <h2>Dagens fokus</h2>
+        <div class="step">
+          <div class="number">1</div>
+          <p>Öppna hemsidan och kolla att den känns okej att visa.</p>
+        </div>
+        <div class="step">
+          <div class="number">2</div>
+          <p>Skicka mailet till Lilla butiken & Södersol.</p>
+        </div>
+        <div class="step">
+          <div class="number">3</div>
+          <p>Skriv in skickat-datum i kundloggen.</p>
+        </div>
+      </div>
+
+      <div class="panel customer">
+        <span class="tag">Första kandidat</span>
+        <h2 style="margin-top: 12px;">Lilla butiken & Södersol</h2>
+        <p>Kontakt: butikenpasoder@gmail.com</p>
+      </div>
+
+      <div class="panel">
+        <h2>Mailtext</h2>
+        <div class="mailbox" id="mailText"></div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const subject = "Förslag på tydligare produkttexter";
+    const body = `Hej!
+
+Jag heter Daniel och testar en enkel tjänst där jag hjälper lokala småföretag att göra produkttexter och kampanjtexter tydligare och mer säljande.
+
+Jag kikade på er butik och tror att jag skulle kunna hjälpa till med några enkla textförbättringar, till exempel produkttexter, korta kampanjtexter eller texter för sociala medier.
+
+För att göra det enkelt kan jag ta fram 3 förslag som ett litet test. Om det känns användbart kan vi prata vidare, annars är det ingen fara.
+
+Här är min sida:
+https://produktfixaren-daniel.netlify.app/
+
+Vanliga hälsningar,
+Daniel`;
+
+    document.getElementById("mailText").textContent = `Ämne: ${subject}\n\n${body}`;
+    document.getElementById("mailLink").href =
+      `mailto:butikenpasoder@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  </script>
+</body>
+</html>
