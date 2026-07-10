@@ -104,16 +104,15 @@
   </script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Hoppa till innehåll</a>
-  <form class="hidden" name="kontakt" method="POST" netlify netlify-honeypot="bot-field" aria-hidden="true">
-    <input type="hidden" name="form-name" value="kontakt">
-    <input name="bot-field">
-    <input name="namn">
-    <input name="epost">
-    <input name="tjanst">
-    <input name="lank">
-    <textarea name="meddelande"></textarea>
-  </form>
+  <form class="hidden" name="kontakt" method="POST" action="https://formspree.io/f/mqevreww" aria-hidden="true">
+      <input type="hidden" name="_next" value="/tack/">
+      <input name="bot-field" tabindex="-1" autocomplete="off">
+      <input name="namn">
+      <input name="epost">
+      <input name="tjanst">
+      <input name="lank">
+      <textarea name="meddelande"></textarea>
+    </form>
   <header class="site-header">
     <a class="brand" href="/" aria-label="Produktfixaren startsida">Produktfixaren</a>
     <nav class="site-nav" aria-label="Huvudmeny">

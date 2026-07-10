@@ -5,7 +5,7 @@
 - Write customer-facing copy in clear Swedish with short sentences and concrete next steps.
 - Keep pages mobile-first and accessible: semantic headings, labels, visible focus states and keyboard-friendly navigation.
 - Every important page should have a unique title, description, canonical URL and internal links.
-- Use Netlify Forms for contact. Keep the honeypot field and the `/tack/` redirect.
+- Use Formspree for contact forms. Keep the honeypot field and the `/tack/` redirect.
 - Do not lazy-load the hero image. Lazy-load below-the-fold images.
 - Avoid vague marketing claims. Explain what is fixed, who it helps and what the customer gets.
 - Run a local link/metadata check before packaging the site.
@@ -24,7 +24,7 @@
 - Verify Swedish characters render as UTF-8: `å`, `ä`, `ö`.
 - Verify images: hero image loads eagerly and has dimensions; below-the-fold images use `loading="lazy"` and dimensions.
 - Verify accessibility basics: skip link, semantic headings, labels, visible focus states, keyboard-friendly nav and no horizontal page overflow.
-- Verify Netlify Forms: `name="kontakt"`, hidden `form-name`, honeypot field and `action="/tack/"`.
+- Verify Formspree forms: `name="kontakt"`, honeypot field and `_next` redirect to `/tack/`.
 - Check for common UI anti-patterns: `transition: all`, `outline: none`, disabled zoom, `...` instead of `…`, blocked paste, missing labels or missing image dimensions.
 
 ## Gotchas
@@ -41,6 +41,6 @@
 
 - The local link/metadata check passes.
 - Desktop and mobile previews show no broken layout, overlap or horizontal page overflow.
-- The contact form keeps Netlify Forms, honeypot and `/tack/` redirect intact.
+- The contact form keeps Formspree, honeypot and `/tack/` redirect intact.
 - The zip is rebuilt from the current `hemsida` contents and has files at the zip root.
 - After upload, verify the live Netlify page, nav links, key offer text, `/kontakt/`, `/robots.txt`, `/sitemap.xml` and one test form submission.
