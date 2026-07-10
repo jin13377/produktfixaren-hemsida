@@ -4,3 +4,10 @@
 # Large Netlify build artifacts (contain secrets)
 netlify-*.js
 *.zip
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
